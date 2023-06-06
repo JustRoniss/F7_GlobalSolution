@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+    <title>Dash 2</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mundo Verde</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Sobre o projeto <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./sustentabilidade.html">Sustentabilidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./comunidade.html">Comunidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Video Pitch</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Intenção é ter um mapa mundi interativo que o usuário pode clicar,
+            e o gráfico do lado recalcula os dados conforme os continentes selecionados
+            E sim, tem que ser interativo:
+            "O slide 6 trata de dados, porcentagens e gráficos que falam sobre Insegurança alimentar.
+            Faça uma página que manipule estas informações de forma interativa a partir do manuseio do usuário do site.
+            O grupo pode explorar este assunto com o que o achar relevante."
+        -->
+    <div class="bg-dark p-2">
+        <object id="continentes" data="../images/Continents.svg"></object>
+    </div>
+    <div class="bg-dark p-2">
+        <div class="progress w-50">
+            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0"
+                aria-valuemax="100"></div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30"
+                aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="../scripts/dashboards.js" defer></script>
+</body>
+
+</html>

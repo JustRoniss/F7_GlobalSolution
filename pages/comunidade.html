@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Atividades</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mundo Verde</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Sobre o projeto <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./sustentabilidade.html">Sustentabilidade</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Comunidade</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Video Pitch</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6">
+        <h2 class="text-center mb-4">Comunidade</h2>
+        <form id="activityForm">
+          <div class="mb-3">
+            <label for="nameInput" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Digite seu nome">
+          </div>
+          <div class="mb-3">
+            <label for="actionInput" class="form-label">Ação</label>
+            <input type="text" class="form-control" id="actionInput" placeholder="Digite a ação">
+          </div>
+          <div class="mb-3">
+            <label for="typeSelect" class="form-label">Tipo de Atividade</label>
+            <select class="form-select" id="typeSelect">
+              <option value="">Selecione o tipo de atividade</option>
+              <option value="1">Reciclagem</option>
+              <option value="2">Redução do consumo de água</option>
+              <option value="3">Redução na emissão de gases</option>
+            </select>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6">
+        <div id="activityRecords"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  crossorigin="anonymous"></script>
+
+  <script src="../scripts/comunidade.js"></script>
+</body>
+</html>
