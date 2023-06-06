@@ -7,4 +7,9 @@
 .imagem{
 
     height: 800px;
+    opacity: 1;
+}
+
+.textCarrosel{
+  font-weight: bold;
 }
