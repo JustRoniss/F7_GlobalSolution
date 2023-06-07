@@ -5,10 +5,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
-
-    <title>Dash 2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        crossorigin="anonymous" />
+    <title>Insegurança Alimentar</title>
 </head>
 
 <body>
@@ -36,27 +35,61 @@
         </div>
     </nav>
 
+    <!-- Title card sei la -->
+    <h1 class="text-center">Mapa interativo: Insegurança Alimentar</h1>
+    <h5 class="text-center text-muted">Selecione múltiplas áreas para visualizar a média entre seus dados</h5>
+
     <!-- Intenção é ter um mapa mundi interativo que o usuário pode clicar,
-            e o gráfico do lado recalcula os dados conforme os continentes selecionados
-            E sim, tem que ser interativo:
-            "O slide 6 trata de dados, porcentagens e gráficos que falam sobre Insegurança alimentar.
-            Faça uma página que manipule estas informações de forma interativa a partir do manuseio do usuário do site.
-            O grupo pode explorar este assunto com o que o achar relevante."
+        e o gráfico do lado recalcula os dados conforme os continentes selecionados
+        E sim, tem que ser interativo:
+        "O slide 6 trata de dados, porcentagens e gráficos que falam sobre Insegurança alimentar.
+        Faça uma página que manipule estas informações de forma interativa a partir do manuseio do usuário do site.
+        O grupo pode explorar este assunto com o que o achar relevante."
+    -->
+    <div class="container">
+        <!--
+            Gostei bastante de como ficou a barra de gráfico;
+            o problema é que quando uma porcentagem fica pequena demais,
+            o texto dentro dela não cabe, e eu não sei exatamente o que fazer pra esconder isso
+            Eu sei que bootstrap dá um jeito de esconder elementos dependendo do tamanho *da tela*,
+            mas não sei se tem como esconder os elementos dependendo do seu próprio tamanho
+
+            ...Acabei dando min-width pra elas, o que é problemático porque vai fazer
+            valores baixos (1.5%, 6.5%) parecerem maiores do que a realidade (visualmente 15%)
+
+            acho que isso é melhor do que correr o risco de perder ponto por deixar o texto dar overflow
         -->
-    <div class="bg-dark p-2">
-        <object id="continentes" data="../images/Continents.svg"></object>
-    </div>
-    <div class="bg-dark p-2">
-        <div class="progress w-50">
-            <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0"
-                aria-valuemax="100"></div>
-            <div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30"
-                aria-valuemin="0" aria-valuemax="100"></div>
-            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
-                aria-valuemax="100"></div>
+        <div class="bg-dark p-2">
+            <div class="progress-stacked fw-bold" style="height: 3rem">
+                <div class="progress" role="progressbar" id="barraSevera" style="width: 30%; height: 3rem; min-width: 15%;">
+                    <div class="progress-bar bg-danger text-dark">
+                        <span>Insegurança Alimentar Severa</span>
+                        <span id="textoSevera">30%</span>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" id="barraModerada" style="width: 50%; height: 3rem; min-width: 15%;">
+                    <div class="progress-bar bg-warning text-dark">
+                        <span>Insegurança Alimentar Moderada</span>
+                        <span id="textoModerada">50%</span>
+                    </div>
+                </div>
+                <div class="progress" role="progressbar" id="barraSegura" style="width: 20%; height: 3rem; min-width: 15%;">
+                    <div class="progress-bar bg-info text-dark">
+                        <span>Segurança Alimentar</span>
+                        <span id="textoSegura">20%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="bg-info" style="height: 2px;"></div>
+        
+        <div class="bg-dark p-2">
+            <!-- https://css-tricks.com/scale-svg/#:~:text=Once%20you%20add%20a%20viewBox,whatever%20size%20you%20give%20it. -->
+            <object id="continentes" data="../images/Continents.svg"></object>
         </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -64,10 +97,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
-    <script src="../scripts/dashboards.js" defer></script>
+    <script src="../scripts/dashboards.js"></script>
 </body>
 
 </html>
