@@ -35,8 +35,10 @@
         </div>
     </nav>
 
-    <h1 class="text-center">Mapa interativo: Insegurança Alimentar</h1>
-    <h5 class="text-center text-muted">Selecione múltiplas áreas para visualizar a média entre seus dados</h5>
+    <section class="text-bg-success text-center pb-1 mb-1">
+        <h1>Mapa interativo: Insegurança Alimentar</h1>
+        <h5 class="text-muted">Selecione múltiplas áreas para visualizar a média entre seus dados</h5>
+    </section>
 
     <!-- Intenção é ter um mapa mundi interativo que o usuário pode clicar,
         e o gráfico do lado recalcula os dados conforme os continentes selecionados
@@ -59,7 +61,7 @@
             acho que isso é melhor do que correr o risco de perder ponto por deixar o texto dar overflow
             bom, pelo menos é em favor da imagem de que há muita insegurança alimentar, e não o contrário
         -->
-        <div class="bg-dark p-2">
+        <div class="bg-dark p-2 border-primary" style="border: 3px solid; border-bottom: 0;">
             <div class="progress-stacked fw-bold" style="height: 3rem">
                 <div class="progress" role="progressbar" id="barraSevera"
                     style="width: 30%; height: 3rem; min-width: 15%;">
@@ -86,12 +88,12 @@
         </div>
 
 
-        <div class="bg-info" style="height: 2px;"></div>
+        <!-- <div class="bg-info" style="height: 2px;"></div> -->
 
         <!-- https://css-tricks.com/scale-svg/#:~:text=Once%20you%20add%20a%20viewBox,whatever%20size%20you%20give%20it. -->
         <!-- Fixme: se sobrar tempo, cortar México pra baixo de fora da América do Norte,
              e colocar no grupo América Latina + Caribe -->
-        <div class="bg-dark p-2">
+        <div class="bg-dark p-2 border-primary" style="border: 3px solid;">
             <object id="continentes" data="../images/Continents.svg"></object>
         </div>
         <h5 class="text-center text-muted">Fonte: ONU - O Estado de Segurança Alimentar e Nutrição no Mundo (2022)</h5>
