@@ -35,7 +35,6 @@
         </div>
     </nav>
 
-    <!-- Title card sei la -->
     <h1 class="text-center">Mapa interativo: Insegurança Alimentar</h1>
     <h5 class="text-center text-muted">Selecione múltiplas áreas para visualizar a média entre seus dados</h5>
 
@@ -84,11 +83,14 @@
 
         
         <div class="bg-info" style="height: 2px;"></div>
-        
+
+        <!-- https://css-tricks.com/scale-svg/#:~:text=Once%20you%20add%20a%20viewBox,whatever%20size%20you%20give%20it. -->
+        <!-- Fixme: se sobrar tempo, cortar México pra baixo de fora da América do Norte,
+             e colocar no grupo América Latina + Caribe -->        
         <div class="bg-dark p-2">
-            <!-- https://css-tricks.com/scale-svg/#:~:text=Once%20you%20add%20a%20viewBox,whatever%20size%20you%20give%20it. -->
             <object id="continentes" data="../images/Continents.svg"></object>
         </div>
+        <h5 class="text-center text-muted">Fonte: ONU - O Estado de Segurança Alimentar e Nutrição no Mundo (2022)</h5>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
