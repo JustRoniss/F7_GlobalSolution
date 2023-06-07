@@ -5,7 +5,7 @@ let continentes = {
   //importante: esses IDs têm que bater com os IDs da .svg
   //sim esse sistema inteiro é hack mas fazer o que, é pra entregar a GS daqui a 2 dias kkkkk
   africa: {
-    populacao: 1440808985, //fixme: acertar população lol
+    populacao: 1440808985,
     txInsegModeradaSevera: 57.9, //lembrar que esse é a soma de moderada *e* severa
     txInsegSevera: 23.4,
     corOn: "#dbdb09",
@@ -62,8 +62,6 @@ window.addEventListener("load", function () {
   //deixar o continente da África já ativo
   reacaoClick(docContinentes.getElementById("africa"), "africa");
 });
-
-function pintarContinente(element, cor) {}
 
 function inicializarContinente(element, id) {
   element.onclick = function () {
@@ -130,7 +128,7 @@ function atualizarGrafico() {
 function escreverBarra(tipo, numero, taxa) {
   let barra = document.getElementById("barra" + tipo);
   let texto = document.getElementById("texto" + tipo);
-  console.log("width: " + taxa.toFixed(2) + "%");
+  //console.log("width: " + taxa.toFixed(2) + "%");
   barra.style.width = taxa.toFixed(2) + "%";
   texto.innerText = `${(numero / 10 ** 6).toFixed(2)}mi / ${taxa.toFixed(2)}%`;
 }
