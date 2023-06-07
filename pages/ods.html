@@ -1,134 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="../styles/ods.css">
 
-    <title>Document</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <title>Mundo Verde</title>
+</head>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Mundo Verde</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="../index.html"
-              >Sobre o projeto <span class="sr-only"></span
-            ></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sustentabilidade</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./comunidade.html">Comunidade</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Video Pitch</a>
-          </li>
-        </ul>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Mundo Verde</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Sobre o projeto <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sustentabilidade</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./comunidade.html">Comunidade</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Video Pitch</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="carrosel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carrosel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carrosel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carrosel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carrosel" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carrosel" data-bs-slide-to="4"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="../images/prato-cheio.jpg" class="d-block w-100" />
+        <div class="carousel-caption bg-opacity-75 text-bg-dark">
+          <h4>
+            Meta 1: Acabar com a fome e garantir acesso a alimentos
+            suficientes
+          </h4>
+          <span>
+            Até 2030, acabar com a fome e garantir o acesso de todas as
+            pessoas, em particular os pobres e pessoas em situações
+            vulneráveis, incluindo crianças, a alimentos seguros,
+            nutritivos e suficientes durante todo o ano.
+          </span>
+        </div>
       </div>
-    </nav>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-      crossorigin="anonymous"
-    ></script>
-    
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-        <li data-target="#myCarousel" data-slide-to="4"></li>
-      </ol>
 
-      <!-- Slides -->
-      <div class="bloco">
-        <div class="row justify-content-center mt-5">
-          <div class="col-lg-6">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="imagem" src="../images/prato-cheio.jpg
-                    " alt="Imagem 1" class="d-block w-100" />
-                    <div class="carousel-caption bg-opacity-25 text-bg-dark">
-                        <h5 class="text-dark textCarrosel">Meta 1: Acabar com a fome e garantir acesso a alimentos suficientes</h5>
-                        <p class="text-dark ">
-                          Até 2030, acabar com a fome e garantir o acesso de todas as pessoas, em particular os pobres e pessoas em situações vulneráveis, incluindo crianças, a alimentos seguros, nutritivos e suficientes durante todo o ano.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="imagem"
-                        src="../images/nutrir-o-futuro-meta2-new.jpeg"
-                        alt="Imagem 2"
-                        class="d-block w-100"
-                    />
-                    <div class="carousel-caption">
-                        <h5 class="text-dark">Meta 2: Acabar com todas as formas de má-nutrição</h5>
-                        <p class="text-dark textCarrosel">Até 2030, acabar com todas as formas de má-nutrição, incluindo atingir, até 2025, as metas acordadas internacionalmente sobre nanismo e caquexia em crianças menores de cinco anos de idade, e atender às necessidades nutricionais dos adolescentes, mulheres grávidas e lactantes e pessoas idosas.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="imagem"
-                        src="../images/25-AVANCO-DA-AGRICULTURA-meta3.jpg"
-                        alt="Imagem 3"
-                        class="d-block w-100"
-                    />
-                    <div class="carousel-caption">
-                        <h5 class="text-dark">Meta 3: Dobrar a produtividade agrícola e a renda dos pequenos produtores</h5>
-                        <p class="text-dark textCarrosel">Até 2030, dobrar a produtividade agrícola e a renda dos pequenos produtores de alimentos, particularmente das mulheres, povos indígenas, agricultores familiares, pastores e pescadores, inclusive por meio de acesso seguro e igual à terra, outros recursos produtivos e insumos, conhecimento, serviços financeiros, mercados e oportunidades de agregação de valor e de emprego não agrícola</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                  <img class="imagem"
-                      src="../images/meta4.jpg"
-                      alt="Imagem 4"
-                      class="d-block w-100"
-                  />
-                  <div class="carousel-caption">
-                      <h5 class="text-dark">Meta 4: Garantir sistemas sustentáveis de produção de alimentos</h5>
-                      <p class="text-dark textCarrosel">Até 2030, garantir sistemas sustentáveis de produção de alimentos e implementar práticas agrícolas resilientes, que aumentem a produtividade e a produção, que ajudem a manter os ecossistemas, que fortaleçam a capacidade de adaptação às mudanças climáticas, às condições meteorológicas extremas, secas, inundações e outros desastres, e que melhorem progressivamente a qualidade da terra e do solo.</p>
-                  </div>
-                </div>
-                  <div class="carousel-item">
-                    <img class="imagem"
-                        src="../images/meta5.jpg"
-                        alt="Imagem 5"
-                        class="d-block w-100"
-                    />
-                    <div class="carousel-caption">
-                        <h5 class="text-dark">Meta 5: Manter a diversidade genética de sementes e animais.</h5>
-                        <p class="text-dark textCarrosel">Até 2030, manter a diversidade genética de sementes, plantas cultivadas, animais de criação e domesticados e suas respectivas espécies selvagens, inclusive por meio de bancos de sementes e plantas diversificados e bem geridos em nível nacional, regional e internacional, e garantir o acesso e a repartição justa e equitativa dos benefícios decorrentes da utilização dos recursos genéticos e conhecimentos tradicionais associados, como acordado internacionalmente.</p>
-                    </div>
-                  </div>
-              </div>
-            </div>
-          </div>
+      <div class="carousel-item">
+        <img src="../images/nutrir-o-futuro-meta2-new.jpeg" class="d-block w-100" />
+        <div class="carousel-caption bg-opacity-75 text-bg-dark">
+          <h4>
+            Meta 2: Acabar com todas as formas de má-nutrição
+          </h4>
+          <span>
+            Até 2030, acabar com todas as formas de má-nutrição, incluindo
+            atingir, até 2025, as metas acordadas internacionalmente sobre
+            nanismo e caquexia em crianças menores de cinco anos de idade,
+            e atender às necessidades nutricionais dos adolescentes,
+            mulheres grávidas e lactantes e pessoas idosas.
+          </span>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../images/25-AVANCO-DA-AGRICULTURA-meta3.jpg" class="d-block w-100" />
+        <div class="carousel-caption bg-opacity-75 text-bg-dark">
+          <h4>
+            Meta 3: Dobrar a produtividade agrícola e a renda dos pequenos
+            produtores
+          </h4>
+          <span>
+            Até 2030, dobrar a produtividade agrícola e a renda dos
+            pequenos produtores de alimentos, particularmente das
+            mulheres, povos indígenas, agricultores familiares, pastores e
+            pescadores, inclusive por meio de acesso seguro e igual à
+            terra, outros recursos produtivos e insumos, conhecimento,
+            serviços financeiros, mercados e oportunidades de agregação de
+            valor e de emprego não agrícola.
+          </span>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../images/meta4.jpg" class="d-block w-100" />
+        <div class="carousel-caption bg-opacity-75 text-bg-dark">
+          <h4>
+            Meta 4: Garantir sistemas sustentáveis de produção de
+            alimentos
+          </h4>
+          <span>
+            Até 2030, garantir sistemas sustentáveis de produção de
+            alimentos e implementar práticas agrícolas resilientes, que
+            aumentem a produtividade e a produção, que ajudem a manter os
+            ecossistemas, que fortaleçam a capacidade de adaptação às
+            mudanças climáticas, às condições meteorológicas extremas,
+            secas, inundações e outros desastres, e que melhorem
+            progressivamente a qualidade da terra e do solo.
+          </span>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="../images/meta5.jpg" class="d-block w-100" />
+        <div class="carousel-caption bg-opacity-75 text-bg-dark">
+          <h4>
+            Meta 5: Manter a diversidade genética de sementes e animais.
+          </h4>
+          <span>
+            Até 2030, manter a diversidade genética de sementes, plantas
+            cultivadas, animais de criação e domesticados e suas
+            respectivas espécies selvagens, inclusive por meio de bancos
+            de sementes e plantas diversificados e bem geridos em nível
+            nacional, regional e internacional, e garantir o acesso e a
+            repartição justa e equitativa dos benefícios decorrentes da
+            utilização dos recursos genéticos e conhecimentos tradicionais
+            associados, como acordado internacionalmente.
+          </span>
         </div>
 
-      <!-- Controls -->
+      </div>
+    </div>
+
+    <!--
       <a
         class="carousel-control-prev"
         href="#myCarousel"
@@ -148,21 +158,24 @@
         <span class="sr-only">Próximo</span>
       </a>
     </div>
+    -->
 
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
       integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
+    <script>
+      const myCarouselElement = document.querySelector('#carrosel')
+      const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 20000,
+        touch: false
+      })
+    </script>
+</body>
+
 </html>
