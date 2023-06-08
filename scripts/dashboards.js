@@ -52,8 +52,16 @@ window.addEventListener("load", function () {
     */
 
   // docContinentes é a .svg, mas é um objeto document então preferi o nome
+
+  /*
+  Da documentação https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement/contentDocument: 
+  If the iframe and the iframe's parent document are Same Origin,
+  returns a Document (that is, the active document in the inline frame's nested browsing context), else returns null.
+
+  Pelo live server isso não tem problema, mas se o usuário executar pelo arquivo index.html isso vai quebrar TUDO
+  */
   let docContinentes =
-    this.document.getElementById("continentes").contentDocument;
+    document.getElementById("continentes").contentDocument;
   for (let idContinente in continentes) {
     let continente = docContinentes.getElementById(idContinente);
     inicializarContinente(continente, idContinente);
