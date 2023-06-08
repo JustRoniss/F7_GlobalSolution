@@ -2,117 +2,113 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        crossorigin="anonymous" />
-    <title>Insegurança Alimentar</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
+  <title>Insegurança Alimentar</title>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light
-            bg-light border-bottom border-3 border-success p-0">
-            <a class="navbar-brand m-0" href="../index.html">
-                <img class="image-fluid p-1" src="../images/Logo.svg" height="75">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav fs-4">
-                    <li class="nav-item" style="margin-right: 20px;">
-                        <a class="nav-link" href="../index.html">Save The World</a>
-                    </li>
-                    <li class="nav-item" style="margin-right: 20px;">
-                        <a class="nav-link" href="../pages/dash-1.html">Fome</a>
-                    </li>
-                    <li class="nav-item" style="margin-right: 20px;">
-                        <a class="nav-link active" href="../pages/dash-2.html">Insegurança Alimentar</a>
-                    </li>
-                    <li class="nav-item" style="margin-right: 20px;">
-                        <a class="nav-link" href="../pages/ods.html">Metas até 2030</a>
-                    </li>
-                    <li class="nav-item" style="margin-right: 20px;">
-                        <a class="nav-link" href="../pages/fale-conosco.html">Fale Conosco</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light
+      bg-light border-bottom border-3 border-success p-0">
+      <a class="navbar-brand m-0" href="../index.html">
+        <img class="image-fluid p-1" src="../images/Logo.svg" height="75">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav fs-4">
+          <li class="nav-item" style="margin-right: 20px;">
+            <a class="nav-link" href="../index.html">Save The World</a>
+          </li>
+          <li class="nav-item" style="margin-right: 20px;">
+            <a class="nav-link" href="../pages/dash-1.html">Fome</a>
+          </li>
+          <li class="nav-item" style="margin-right: 20px;">
+            <a class="nav-link active" href="../pages/dash-2.html">Insegurança Alimentar</a>
+          </li>
+          <li class="nav-item" style="margin-right: 20px;">
+            <a class="nav-link" href="../pages/ods.html">Metas até 2030</a>
+          </li>
+          <li class="nav-item" style="margin-right: 20px;">
+            <a class="nav-link" href="../pages/fale-conosco.html">Fale Conosco</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <section class="text-bg-success text-center pb-1 mb-1">
-        <h2>Mapa interativo: Insegurança Alimentar</h2>
-        <h5 class="text-muted">Selecione múltiplas áreas para visualizar a média entre seus dados</h5>
-    </section>
+  <section class="text-bg-success text-center pb-1 mb-1">
+    <h2>Mapa interativo: Insegurança Alimentar</h2>
+    <h5 class="text-muted">Selecione múltiplas áreas para visualizar a média entre seus dados</h5>
+  </section>
 
-    <!-- Intenção é ter um mapa mundi interativo que o usuário pode clicar,
-        e o gráfico do lado recalcula os dados conforme os continentes selecionados
-        E sim, tem que ser interativo:
-        "O slide 6 trata de dados, porcentagens e gráficos que falam sobre Insegurança alimentar.
-        Faça uma página que manipule estas informações de forma interativa a partir do manuseio do usuário do site.
-        O grupo pode explorar este assunto com o que o achar relevante."
+  <!-- Intenção é ter um mapa mundi interativo que o usuário pode clicar,
+    e o gráfico do lado recalcula os dados conforme os continentes selecionados
+    E sim, tem que ser interativo:
+    "O slide 6 trata de dados, porcentagens e gráficos que falam sobre Insegurança alimentar.
+    Faça uma página que manipule estas informações de forma interativa a partir do manuseio do usuário do site.
+    O grupo pode explorar este assunto com o que o achar relevante."
+  -->
+  <div class="container">
+    <!--
+      Gostei bastante de como ficou a barra de gráfico;
+      o problema é que quando uma porcentagem fica pequena demais,
+      o texto dentro dela não cabe, e eu não sei exatamente o que fazer pra esconder isso
+      Eu sei que bootstrap dá um jeito de esconder elementos dependendo do tamanho *da tela*,
+      mas não sei se tem como esconder os elementos dependendo do seu próprio tamanho
+
+      ...Acabei dando min-width pra elas, o que é problemático porque vai fazer
+      valores baixos (1.5%, 6.5%) parecerem maiores do que a realidade (visualmente 15%)
+
+      acho que isso é melhor do que correr o risco de perder ponto por deixar o texto dar overflow
+      bom, pelo menos é em favor da imagem de que há muita insegurança alimentar, e não o contrário
     -->
-    <div class="container">
-        <!--
-            Gostei bastante de como ficou a barra de gráfico;
-            o problema é que quando uma porcentagem fica pequena demais,
-            o texto dentro dela não cabe, e eu não sei exatamente o que fazer pra esconder isso
-            Eu sei que bootstrap dá um jeito de esconder elementos dependendo do tamanho *da tela*,
-            mas não sei se tem como esconder os elementos dependendo do seu próprio tamanho
-
-            ...Acabei dando min-width pra elas, o que é problemático porque vai fazer
-            valores baixos (1.5%, 6.5%) parecerem maiores do que a realidade (visualmente 15%)
-
-            acho que isso é melhor do que correr o risco de perder ponto por deixar o texto dar overflow
-            bom, pelo menos é em favor da imagem de que há muita insegurança alimentar, e não o contrário
-        -->
-        <div class="bg-dark p-2 border-primary" style="border: 3px solid; border-bottom: 0;">
-            <div class="progress-stacked fw-bold" style="height: 3rem">
-                <div class="progress" role="progressbar" id="barraSevera"
-                    style="width: 30%; height: 3rem; min-width: 15%;">
-                    <div class="progress-bar bg-danger text-dark">
-                        <span>Insegurança Alimentar Severa</span>
-                        <span id="textoSevera">30%</span>
-                    </div>
-                </div>
-                <div class="progress" role="progressbar" id="barraModerada"
-                    style="width: 50%; height: 3rem; min-width: 15%;">
-                    <div class="progress-bar bg-warning text-dark">
-                        <span>Insegurança Alimentar Moderada</span>
-                        <span id="textoModerada">50%</span>
-                    </div>
-                </div>
-                <div class="progress" role="progressbar" id="barraSegura"
-                    style="width: 20%; height: 3rem; min-width: 15%;">
-                    <div class="progress-bar bg-info text-dark">
-                        <span>Segurança Alimentar</span>
-                        <span id="textoSegura">20%</span>
-                    </div>
-                </div>
-            </div>
+    <div class="bg-dark p-2 border-primary" style="border: 3px solid; border-bottom: 0;">
+      <div class="progress-stacked fw-bold" style="height: 3rem">
+        <div class="progress" role="progressbar" id="barraSevera" style="width: 30%; height: 3rem; min-width: 15%;">
+          <div class="progress-bar bg-danger text-dark">
+            <span>Insegurança Alimentar Severa</span>
+            <span id="textoSevera">30%</span>
+          </div>
         </div>
-
-        <!-- https://css-tricks.com/scale-svg/#:~:text=Once%20you%20add%20a%20viewBox,whatever%20size%20you%20give%20it. -->
-        <!-- Fixme: se sobrar tempo, cortar México pra baixo de fora da América do Norte,
-             e colocar no grupo América Latina + Caribe -->
-        <div class="bg-dark p-2 border border-3 border-primary">
-            <object id="continentes" data="../images/Continents.svg"></object>
+        <div class="progress" role="progressbar" id="barraModerada" style="width: 50%; height: 3rem; min-width: 15%;">
+          <div class="progress-bar bg-warning text-dark">
+            <span>Insegurança Alimentar Moderada</span>
+            <span id="textoModerada">50%</span>
+          </div>
         </div>
-        <h5 class="text-center text-muted">Fonte: ONU - O Estado de Segurança Alimentar e Nutrição no Mundo (2022)</h5>
+        <div class="progress" role="progressbar" id="barraSegura" style="width: 20%; height: 3rem; min-width: 15%;">
+          <div class="progress-bar bg-info text-dark">
+            <span>Segurança Alimentar</span>
+            <span id="textoSegura">20%</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-        crossorigin="anonymous"></script>
-    <script src="../scripts/dashboards.js"></script>
+    <!-- https://css-tricks.com/scale-svg/#:~:text=Once%20you%20add%20a%20viewBox,whatever%20size%20you%20give%20it. -->
+    <!-- Fixme: se sobrar tempo, cortar México pra baixo de fora da América do Norte,
+      e colocar no grupo América Latina + Caribe -->
+    <div class="bg-dark p-2 border border-3 border-primary">
+      <object id="continentes" data="../images/Continents.svg"></object>
+    </div>
+    <h5 class="text-center text-muted">Fonte: ONU - O Estado de Segurança Alimentar e Nutrição no Mundo (2022)</h5>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="../scripts/dashboards.js"></script>
 </body>
 
 </html>
